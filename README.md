@@ -5,7 +5,7 @@ Configuration files, notes, scripts, things I spent time configuring and want to
 
 First, `brew install tree` then:
 
-```
+```shell
 alias ent='tree -AC | less -r
 ```
 
@@ -13,15 +13,15 @@ alias ent='tree -AC | less -r
 
 `-r` is "raw control chars" so the color escape codes from `tree` aren't printed literally.
 
-### Sublime command-line tool
+### Sublime CLI tool
 
-```
+```shell
 ln -s "~/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/sublime
 ```
 
 ### Set $EDITOR
 
-```
+```shell
 export EDITOR=/usr/local/bin/sublime
 ```
 
