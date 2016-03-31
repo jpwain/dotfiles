@@ -5,9 +5,9 @@ Configuration files, notes, scripts, things I spent time configuring and want to
 
 First, `brew install tree` then:
 
-```bash
+```
 alias ent='tree -AC | less -r
-'```
+```
 
 `-AC` is use **A**NSI graphic lines and always **c**olorize.
 
@@ -15,13 +15,13 @@ alias ent='tree -AC | less -r
 
 ### Sublime command-line tool
 
-```bash
+```
 ln -s "~/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/sublime
 ```
 
 ### Set $EDITOR
 
-```bash
+```
 export EDITOR=/usr/local/bin/sublime
 ```
 
