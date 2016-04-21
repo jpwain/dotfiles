@@ -30,7 +30,7 @@ Probably I don't need to do this.
 
 ### Base16 color scheme 
 
-For use with [base16-builder]https://github.com/kowalskey/base16-builder (a fork that works)
+For use with [base16-builder](https://github.com/kowalskey/base16-builder) (a fork that works)
 
 **joecool-mono.yml**
 
