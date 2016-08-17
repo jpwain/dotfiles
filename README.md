@@ -27,6 +27,11 @@ export EDITOR=/usr/local/bin/sublime
 
 Probably I don't need to do this.
 
+### Color grep matches
+
+```
+export GREP_OPTIONS='--color=auto'
+```
 
 ### Base16 color scheme 
 
