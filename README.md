@@ -59,3 +59,10 @@ base0D: "677e83"
 base0E: "788f94"
 base0F: "445457"
 ```
+
+### Export manpage to regular text
+```shell
+man pandoc | col -bx | sublime
+```
+
+`-bx` removes backspaces (`b`) and tabs (`x`).
