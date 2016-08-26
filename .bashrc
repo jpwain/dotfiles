@@ -14,3 +14,6 @@ export EDITOR=/usr/local/bin/sublime
 
 # color grep matches
 export GREP_OPTIONS='--color=auto'
+
+# set up an alias for Chrome
+alias chrome="/Applications/Google\\ \\Chrome.app/Contents/MacOS/Google\\ \\Chrome"
