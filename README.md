@@ -61,8 +61,17 @@ base0F: "445457"
 ```
 
 ### Export manpage to regular text
+
 ```shell
 man pandoc | col -bx | sublime
 ```
 
 `-bx` removes backspaces (`b`) and tabs (`x`).
+
+### Better git log, with colors
+
+[Could set this config](https://coderwall.com/p/euwpig/a-better-git-log) as a bash alias or a git alias.
+
+```shell
+alias gitlog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+```
