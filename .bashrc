@@ -20,3 +20,22 @@ alias chrome="/Applications/Google\\ \\Chrome.app/Contents/MacOS/Google\\ \\Chro
 
 # prettier git log
 alias gitlog="git log --reverse --date=format:'%a %e %b %l:%M%p' --pretty=format:'%C(yellow)%h %Creset%>(12)%ad %Cgreen%<(7)%aN%Cred%d %Creset%s'"
+
+# Function `opengit` to open in web browser a github remote
+
+function opengit {
+    if [ -d .git ]; then
+        remotes=$(git remote -v | awk -F'git@github.com:' '{print $2}' | cut -d" " -f1)
+        if [ -z "$remotes" ];
+        then
+            remotes=$(git remote -v | awk -F'https://github.com/' '{print $2}' | cut -d" " -f1)
+        fi
+
+        remote_url=$(echo $remotes | cut -d" " -f1)
+        url="https://github.com/"
+        url="${url}${remote_url}"
+        open $url
+    else
+      echo "No .git file found; not currently in a git repo?"
+    fi;
+}
