@@ -1,12 +1,13 @@
 # configs
+
 Configuration files, notes, scripts, things I spent time configuring and want to remember later.
 
 ### Pretty-print directory tree and paginate
 
 First, `brew install tree` then:
 
-```shell
-alias ent='tree -AC | less -r
+```bash
+alias ent='tree -AC | less -r'
 ```
 
 `-AC` is use **A**NSI graphic lines and always **c**olorize.
@@ -15,13 +16,13 @@ alias ent='tree -AC | less -r
 
 ### Sublime CLI tool
 
-```shell
+```bash
 ln -s "~/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/sublime
 ```
 
 ### Set $EDITOR
 
-```shell
+```bash
 export EDITOR=/usr/local/bin/sublime
 ```
 
@@ -29,11 +30,11 @@ Probably I don't need to do this.
 
 ### Color grep matches
 
-```
+```bash
 export GREP_OPTIONS='--color=auto'
 ```
 
-### Base16 color scheme 
+### Base16 color scheme
 
 For use with [base16-builder](https://github.com/kowalskey/base16-builder) (a fork that works)
 
@@ -62,7 +63,7 @@ base0F: "445457"
 
 ### Export manpage to regular text
 
-```shell
+```bash
 man pandoc | col -bx | sublime
 ```
 
@@ -72,17 +73,18 @@ man pandoc | col -bx | sublime
 
 [Could set this config](https://coderwall.com/p/euwpig/a-better-git-log) as a bash alias or a git alias.
 
-```shell
+```bash
 alias gitlog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 ```
 
 After some tweaking, my better version:
-```shell
+```bash
 alias gitlog="git log --reverse --date=format:'%a %e %b %l:%M%p' --pretty=format:'%C(yellow)%h %Creset%>(12)%ad %Cgreen%<(7)%aN%Cred%d %Creset%s'"
 ```
 
 ### Function `opengit` to open repo's web page on GitHub
 
+```bash
 function opengit {
     if [ -d .git ]; then
         remotes=$(git remote -v | awk -F'git@github.com:' '{print $2}' | cut -d" " -f1)
@@ -99,3 +101,4 @@ function opengit {
       echo "No .git file found; not currently in a git repo?"
     fi;
 }
+```
