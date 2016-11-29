@@ -2,6 +2,8 @@
 
 Configuration files, notes, scripts, things I spent time configuring and want to remember later.
 
+## bash tricks
+
 ### Pretty-print directory tree and paginate
 
 First, `brew install tree` then:
@@ -38,6 +40,22 @@ export GREP_OPTIONS='--color=auto'
 
 For use with [base16-builder](https://github.com/kowalskey/base16-builder) (a fork that works)
 
+### Export manpage to regular text
+
+```bash
+man pandoc | col -bx | sublime
+```
+
+`-bx` removes backspaces (`b`) and tabs (`x`).
+
+### List files sorted by size
+
+```bash
+find . -type f -ls | sort -r -n -k7
+```
+
+## Color schemes
+
 **joecool-mono.yml**
 
 ```yaml
@@ -61,13 +79,8 @@ base0E: "788f94"
 base0F: "445457"
 ```
 
-### Export manpage to regular text
+## Functions
 
-```bash
-man pandoc | col -bx | sublime
-```
-
-`-bx` removes backspaces (`b`) and tabs (`x`).
 
 ### Better git log, with colors
 
