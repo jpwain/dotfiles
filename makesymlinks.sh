@@ -7,7 +7,7 @@
 ########## Variables
 
 dir=~/dotfiles                    # dotfiles directory
-files="bashrc bash_profile"    # list of files/folders to symlink in homedir
+files=".bashrc .bash_profile .tmux.conf"    # list of files/folders to symlink in homedir
 
 ##########
 
@@ -16,9 +16,9 @@ echo "Changing to the $dir directory"
 cd $dir
 echo "...done"
 
-# move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
+# create symlinks 
 for file in $files; do
     echo "Creating symlink to $file in home directory."
-    ln -s $dir/$file ~/.$file
+    ln -s $dir/$file ~/$file
     echo "...done"
 done
