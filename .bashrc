@@ -7,6 +7,9 @@ alias ent='tree -AC | less -r'
 # couldnt figure out how to exit vim so
 export EDITOR=/usr/local/bin/sublime
 
+# configure git to use sublime as editor for commit messages
+# git config --global core.editor "sublime -n -w"
+
 # MG's fancy color settings
 # export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
 # export CLICOLOR=1
@@ -39,3 +42,4 @@ function opengit {
       echo "No .git file found; not currently in a git repo?"
     fi;
 }
+
