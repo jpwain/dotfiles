@@ -2,7 +2,7 @@
 
 Configuration files, notes, scripts, things I spent time configuring and want to remember later.
 
-## bash tricks
+## Set up bash environment
 
 ### Pretty-print directory tree and paginate
 
@@ -19,26 +19,27 @@ alias ent='tree -AC | less -r'
 ### Sublime CLI tool
 
 ```bash
-ln -s "~/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/sublime
+ln -s "~/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/local/bin/sublime
 ```
 
-### Set $EDITOR
+### Set editor
 
 ```bash
 export EDITOR=/usr/local/bin/sublime
 ```
 
-Probably I don't need to do this.
+And in `~/.gitconfig`:
+
+```
+[core]
+  editor = sublime -n -w
+```
 
 ### Color grep matches
 
 ```bash
 export GREP_OPTIONS='--color=auto'
 ```
-
-### Base16 color scheme
-
-For use with [base16-builder](https://github.com/kowalskey/base16-builder) (a fork that works)
 
 ### Export manpage to regular text
 
@@ -79,23 +80,20 @@ base0E: "788f94"
 base0F: "445457"
 ```
 
+### Base16 color scheme
+
+For use with [base16-builder](https://github.com/kowalskey/base16-builder) (a fork that works)
+
 ## Functions
 
 
-### Better git log, with colors
+### Fancy git log, with colors
 
-[Could set this config](https://coderwall.com/p/euwpig/a-better-git-log) as a bash alias or a git alias.
-
-```bash
-alias gitlog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-```
-
-After some tweaking, my better version:
 ```bash
 alias gitlog="git log --reverse --date=format:'%a %e %b %l:%M%p' --pretty=format:'%C(yellow)%h %Creset%>(12)%ad %Cgreen%<(7)%aN%Cred%d %Creset%s'"
 ```
 
-### Function `opengit` to open repo's web page on GitHub
+### `opengit` to open repo's web page on GitHub
 
 ```bash
 function opengit {
