@@ -7,7 +7,7 @@
 ########## Variables
 
 dir=~/dotfiles                    # dotfiles directory
-files=".bashrc .bash_profile .tmux.conf"    # list of files/folders to symlink in homedir
+files=".bashrc .bash_profile .tmux.conf .gitconfig"    # list of files/folders to symlink in homedir
 
 ##########
 
