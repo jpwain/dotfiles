@@ -7,13 +7,12 @@ alias ent='tree -AC | less -r'
 # couldnt figure out how to exit vim so
 export EDITOR=/usr/local/bin/sublime
 
-# configure git to use sublime as editor for commit messages
-# git config --global core.editor "sublime -n -w"
+# ls in columns, with color
+alias ls="ls -laCG"
 
-# MG's fancy color settings
-# export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
-# export CLICOLOR=1
-# export LSCOLORS=ExFxBxDxCxegedabagacad
+# colored less
+
+alias ll='CLICOLOR_FORCE=1 ls -laG | less -R'
 
 # color grep matches
 export GREP_OPTIONS='--color=auto'
