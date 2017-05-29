@@ -24,10 +24,16 @@ alias chrome="/Applications/Google\\ \\Chrome.app/Contents/MacOS/Google\\ \\Chro
 alias gitlog="git log --reverse --date=format:'%a %e %b %l:%M%p' --pretty=format:'%C(yellow)%h %Creset%>(12)%ad %Cgreen%<(7)%aN%Cred%d %Creset%s'"
 
 # defaults for fzf
-export FZF_DEFAULT_OPTS="--multi --exit-0 --bind *:toggle-all,ctrl-p:toggle-preview --preview='head -$LINES {}' --preview-window=hidden --reverse --height 50% --border"
+export FZF_DEFAULT_OPTS="--multi --exit-0 --bind *:toggle-all,ctrl-p:toggle-preview --preview='head {}' --preview-window=hidden --reverse --height 50% --border"
 
 # pick files to edit
 alias fze="find . -maxdepth 1 | fzf | xargs sublime"
+
+# grep pwd and edit
+# TODO: set fzf preview to show context around line number match, e.g. --preview='awk -F: '{print $1":"$2}' 
+function grok {
+  grep -nrI "$1" . | awk -F: '{print $1":"$2}' | fzf | xargs sublime
+}
 
 
 # Function `opengit` to open in web browser a github remote
