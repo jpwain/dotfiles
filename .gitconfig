@@ -1,6 +1,5 @@
 [user]
   name = Joseph Wain
-  email = jpwain@gmail.com
 
 [core]
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
@@ -24,3 +23,6 @@
     added = yellow
     changed = green
     untracked = cyan
+
+[alias]
+  a = add -v
