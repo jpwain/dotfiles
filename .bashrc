@@ -23,6 +23,13 @@ alias chrome="/Applications/Google\\ \\Chrome.app/Contents/MacOS/Google\\ \\Chro
 # prettier git log
 alias gitlog="git log --reverse --date=format:'%a %e %b %l:%M%p' --pretty=format:'%C(yellow)%h %Creset%>(12)%ad %Cgreen%<(7)%aN%Cred%d %Creset%s'"
 
+# defaults for fzf
+export FZF_DEFAULT_OPTS="--multi --exit-0 --bind *:toggle-all,ctrl-p:toggle-preview --preview='head -$LINES {}' --preview-window=hidden --reverse --height 50% --border"
+
+# pick files to edit
+alias fze="find . -maxdepth 1 | fzf | xargs sublime"
+
+
 # Function `opengit` to open in web browser a github remote
 
 function opengit {
