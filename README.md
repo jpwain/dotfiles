@@ -19,7 +19,7 @@ alias ent='tree -AC | less -r'
 ### Sublime CLI tool
 
 ```bash
-ln -s "~/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/local/bin/sublime
+ln -s "~/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/sublime
 ```
 
 ### Set editor
