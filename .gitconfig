@@ -1,11 +1,12 @@
-[user]
-	name = Joseph Wain
-	email = jpwain@gmail.com
+[includeIf "gitdir:~/git/"]
+  path = .gitconfig-personal
+[includeIf "gitdir:~/git/work/"]
+  path = .gitconfig-work
 
 [core]
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
   quotepath = false
-  excludesfile = /Users/jpwain/.gitignore
+	excludesfile = /Users/jpwain/.gitignore_global
   editor = sublime -n -w
 
 [color]
