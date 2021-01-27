@@ -11,8 +11,10 @@ export EDITOR=/usr/local/bin/sublime
 alias ls="ls -laCG"
 
 # colored less
-
 alias ll='CLICOLOR_FORCE=1 ls -laG | less -R'
+
+# browsersync -- 
+alias bs='browser-sync start -s -f . --no-notify --host $LOCAL_IP --port 9000 --index $1'
 
 # color grep matches
 export GREP_OPTIONS='--color=auto'
@@ -21,7 +23,7 @@ export GREP_OPTIONS='--color=auto'
 alias chrome="~/Applications/Google\\ \\Chrome.app/Contents/MacOS/Google\\ \\Chrome"
 
 # prettier git log
-alias gitlog="git log --reverse --date=format:'%a %e %b %l:%M%p' --pretty=format:'%C(yellow)%h %Creset%>(12)%ad %Cgreen%<(7)%aN%Cred%d %Creset%s'"
+alias gitlog="git log --date=format:'%a %e %b %l:%M%p' --pretty=format:'%C(yellow)%h %Creset%>(12)%ad %Cgreen%<(7)%aN%Cred%d %Creset%s'"
 
 # defaults for fzf
 export FZF_DEFAULT_OPTS="--multi --exit-0 --bind *:toggle-all,ctrl-p:toggle-preview --preview='head {}' --preview-window=hidden --reverse --height 50% --border"
